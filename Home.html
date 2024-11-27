@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HOME</title>
+    <link href="https://fonts.googleapis.com/css2?family=Hacker&display=swap" rel="stylesheet">
+    <style>
+        body{
+            margin: 0px;
+            padding: 0px;
+        }
+        .cont{
+            display: block;
+            justify-content:space-between;
+            text-align: center;
+            background-color: rgb(255, 255, 255);
+            overflow-x: hidden;
+        }
+        .cont header{
+            border-bottom: 10px solid rgb(216, 232, 194); ;
+            display:flex;
+            background: rgb(216, 232, 194);
+            justify-content: center;
+            border-bottom: 10px solid rgb(79, 62, 62);
+        }
+        .cont header nav{
+            background-color: rgb(79, 62, 62);
+            backdrop-filter: blur(10px);
+            border-radius: 10px;
+            float: right;
+        }
+        .cont .logo{
+            padding: 10px;
+        }
+        .cont header nav ul li{
+            display: inline;
+            padding: 15px;
+            color: white;
+            font-weight: bold;
+            font-family: sans-serif;
+            line-height: 40px;
+            text-wrap: nowrap;
+        }
+        .cont header nav ul li a{
+            text-decoration: none;
+            color: white;
+        }
+        .cont header nav ul li:hover{
+          background-color: rgb(72, 231, 183);
+          color: black;
+          border-radius: 10px;
+        }
+        .main{
+            display:block;
+            justify-content: space-between;
+            text-align: center;
+        }
+        .hero{
+            justify-content: center;
+            align-items: center;
+            line-height: 15px;
+            height: 50%;
+            background: url("Burna\ ghost.png");
+            background-position: center;
+            background-size: cover;
+            color: white;
+            display: grid;
+        }
+
+        .cont_cards{
+            display: flex;
+            flex-direction: column;
+            flex: 1 1 200px;
+
+
+        }
+        .main .cont_cards .cards{
+            width: 100%;
+            height: 100%;
+            border: 2px solid #000;
+            margin: 10px;
+            border-radius: 10px;
+            text-wrap: wrap;
+          display: grid;
+        }
+        .main .cont_cards .cards:hover{
+            transform: translateY(5px);
+            transition: .5s ease;
+
+        }
+        #card1{
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            box-shadow:3px 2px 3px 4px ;
+        }
+        #card1 .anime{
+            animation: first 5s ease infinite;
+        }
+        #card2 .second{
+            animation: second 15s ease infinite;
+        }
+        #card3 .third{
+            animation:third 15s ease infinite;
+
+        }
+        @keyframes first{
+            0%{
+                transform: translateX(100px);
+
+            }
+        }
+        @keyframes second{
+            0%{
+                transform: rotate(360deg);
+
+            }
+        }
+        @keyframes third{
+            0%{
+                transform:translateX(200px)
+
+            }
+        }
+
+.links{
+    display:block;
+    height: 100%;
+
+}
+.links a{
+    padding: 10px;
+    text-wrap: nowrap;
+    margin-inline:2px;
+    text-decoration: none;
+    color: rgb(120, 99, 71);
+    line-height: 30px;
+    border-radius: 50px;
+}
+.links a:hover{
+    background-color: rgb(70, 88, 88);
+    height: 5px;
+    color: antiquewhite;
+    font-weight: bold;
+    transition: .8s ease-in-out;
+}
+footer{
+    background-color: #000;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+    color: white;
+}
+    </style>
+</head>
+<body>
+<div class="cont">
+<header>
+    <div class="logo">
+        <h1>Burna Ghost</h1>
+    </div>
+    <nav>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/about">About us </a></li>
+            <li><a href="/login">Login</a></li>
+            <li><a href="/register">register</a></li>
+        </ul>
+    </nav>
+</header>
+
+
+<div class="main">
+    <div class="hero">
+        <h1>Ghost.on</h1><br>
+
+        <p>
+            Welcome to Ghsot.on org. We provide you with  all the means that you may need to be incognito
+        </p>
+    </div>
+
+
+    <div class="cont_cards" id="card1">
+<div class="cards">
+<h1>Need help💁‍♂️</h1>
+<p>Try going to register or login using another account, this will prevent you from  data loss or closure of your account.</p>
+<div class="anime">🔍</div>
+</div>
+<div class="cards" id="card2">
+<h1>Working👷‍♂️</h1>
+<div class="second"><h1>⚒️</h1></div>
+<p>We are always at work anytime you you can see us,for more info visit our platforms below and collaborate with us. </p>
+
+</div>
+<div class="cards" id="card3">
+<h1>Contacts☎️</h1>
+<p>For any issue or question call us on</p>
+<label for="phone">Phone:</label>
+0798772872<br>
+<label for="email">Email:</label>
+Burnaghost250@gmail.com
+<div class="third">📲</div>
+</div>
+    </div>
+</div>
+
+<div class="links">
+    <h2>Dont hesitate to ask from our platforms👻</h2>
+
+   <a href="{{url_for('gmail')}}"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+    <path fill="#EA4335" d="M24 5.457v13.909c0 .904-.732 1.636-1.636 1.636h-3.819V11.73L12 16.64l-6.545-4.91v9.273H1.636A1.636 1.636 0 0 1 0 19.366V5.457c0-2.023 2.309-3.178 3.927-1.964L5.455 4.64 12 9.548l6.545-4.91 1.528-1.145C21.69 2.28 24 3.434 24 5.457z"/>
+  </svg></a>
+    <a href="{{url_for('gmail')}}"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+        <path fill="#6D4AFF" d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm6.219 17.17c-.282.282-.663.44-1.061.44H6.842c-.398 0-.779-.158-1.061-.44a1.5 1.5 0 0 1-.439-1.061V7.89c0-.398.157-.779.439-1.061.282-.282.663-.44 1.061-.44h10.316c.398 0 .779.158 1.061.44.282.282.44.663.44 1.061v8.219c0 .398-.158.779-.44 1.061zM16.5 8.25l-4.5 3.75-4.5-3.75v7.5h9v-7.5z"/>
+    </svg></a>
+    <a href="{{url_for('gmail')}}"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+        <!-- Background circle representing security -->
+        <circle cx="12" cy="12" r="12" fill="#840AFF"/>
+        <!-- Stylized envelope with encryption elements -->
+        <path fill="#FFFFFF" d="M19 7.5v9c0 .828-.672 1.5-1.5 1.5h-11c-.828 0-1.5-.672-1.5-1.5v-9c0-.828.672-1.5 1.5-1.5h11c.828 0 1.5.672 1.5 1.5zm-2 1.5l-5 3.75-5-3.75v6h10v-6z"/>
+        <!-- Lock symbol representing encryption -->
+        <path fill="#FFFFFF" d="M12 11.5l-4-3h8l-4 3z"/>
+    </svg></a>
+    <a href="{{url_for('gmail')}}"><svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 16 16"
+        fill="currentColor"
+        width="25px"
+        height="25px">
+        <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.54 5.47 7.59.4.07.55-.17.55-.38 0-.18-.01-.66-.01-1.29-2.24.49-2.71-1.08-2.71-1.08-.36-.91-.88-1.15-.88-1.15-.72-.49.06-.48.06-.48.8.06 1.22.82 1.22.82.71 1.22 1.86.87 2.31.67.07-.51.28-.87.51-1.07-1.77-.2-3.63-.89-3.63-3.95 0-.87.31-1.58.82-2.14-.08-.21-.36-1.06.08-2.21 0 0 .67-.21 2.2.81.64-.18 1.33-.27 2.02-.27.69 0 1.38.09 2.02.27 1.53-1.02 2.2-.81 2.2-.81.44 1.15.16 2 .08 2.21.51.56.82 1.27.82 2.14 0 3.06-1.86 3.75-3.63 3.95.29.25.54.74.54 1.49 0 1.08-.01 1.95-.01 2.22 0 .21.15.46.56.38C13.71 14.54 16 11.54 16 8c0-4.42-3.58-8-8-8z"/>
+    </svg></a>
+    <a href="{{url_for('gmail')}}"><svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 24 24"
+        fill="blue"
+        width="25px"
+        height="25px">
+        <path d="M22.675 0h-21.35C.601 0 0 .601 0 1.325v21.35C0 23.399.601 24 1.325 24h21.35C23.399 24 24 23.399 24 22.675V1.325C24 .601 23.399 0 22.675 0zM12 24V12h-3v-4h3V6.5c0-2.9 1.79-4.5 4.4-4.5 1.25 0 2.33.09 2.65.12v3.08h-1.82C15.77 5.2 15 6.03 15 7.5V8h4l-1 4h-3v12h-4z"/>
+    </svg></a>
+
+    <a href="{{url_for('gmail')}}"><svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 24 24"
+        fill="tomato"
+        width="25px"
+        height="25px">
+        <path d="M12 2.162c3.207 0 3.58.012 4.85.07 1.314.061 2.24.287 2.758.6a5.49 5.49 0 011.9 1.9c.313.518.539 1.444.6 2.758.058 1.27.07 1.643.07 4.85s-.012 3.58-.07 4.85c-.061 1.314-.287 2.24-.6 2.758a5.49 5.49 0 01-1.9 1.9c-.518.313-1.444.539-2.758.6-1.27.058-1.643.07-4.85.07s-3.58-.012-4.85-.07c-1.314-.061-2.24-.287-2.758-.6a5.49 5.49 0 01-1.9-1.9c-.313-.518-.539-1.444-.6-2.758C2.174 15.582 2.162 15.208 2.162 12s.012-3.58.07-4.85c.061-1.314.287-2.24.6-2.758a5.49 5.49 0 011.9-1.9c.518-.313 1.444-.539 2.758-.6 1.27-.058 1.643-.07 4.85-.07zm0-2.162C8.691 0 8.312.008 7.046.07 5.84.133 4.971.307 4.24.547a7.49 7.49 0 00-2.78 1.22A7.49 7.49 0 00.547 4.24C.307 4.971.133 5.84.07 7.046.008 8.312 0 8.691 0 12s.008 3.688.07 4.954c.063 1.206.237 2.075.547 2.806a7.49 7.49 0 001.22 2.78c.733.733 1.602 1.11 2.806 1.22C8.312 23.992 8.691 24 12 24s3.688-.008 4.954-.07c1.206-.063 2.075-.237 2.806-.547a7.49 7.49 0 002.78-1.22 7.49 7.49 0 001.22-2.78c.31-.731.485-1.6.547-2.806C23.992 15.688 24 15.309 24 12s-.008-3.688-.07-4.954c-.063-1.206-.237-2.075-.547-2.806a7.49 7.49 0 00-1.22-2.78A7.49 7.49 0 0019.76.547C19.029.307 18.16.133 16.954.07 15.688.008 15.309 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zm0 10.162a4 4 0 110-8 4 4 0 010 8zm5.5-10.162a1.5 1.5 0 100 3 1.5 1.5 0 000-3z"/>
+    </svg></a>
+
+</div>
+<footer>
+&copy;Burna Ghost 2024
+</footer>
+</div>
+
+</body>
+</html>
